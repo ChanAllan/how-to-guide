@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <link href="style.css" rel="stylesheet" type="text/css">
+		<title>PDO tutorial - Installation</title>
+	</head>
+<body>
+<h1 class="title">Getting PDO on your system</h1>
+
+<h2>PDO Requirements</h2>
+<p>
+	If you already have PHP 5.1 or later installed on your system, you already have PDO. However,
+	PDO can also be obtained in versions 5.0 and prior to 5.1 as a PECL (repository for PHP extensions)extension. PDO cannot be obtained in earlier versions prior to PHP 5.0 as PDO requires PHP 5.0's object oriented features. 
+</p>
+
+<h2>Check if installation is necessary</h2>
+<p>
+	To determine if you have the PDO MySQL driver enabled, create a PHP file with the following contents: 
+
+	<div class="phpinfo"><img src="images/phpinfo.png" alt="phpinfo"></div>
+
+	Running the following PHP file in your browser of choice will display information about your version of PHP that you have installed. Now search for <strong>pdo_mysql</strong> on the output page and see if it is enabled. If it is enabled, you're all set to proceed using PDO in the next steps. If not, installation of the PDO driver is required. 
+</p>
+
+<h2>Getting the necessary drivers</h2>
+<p>
+	If you could not find <strong>pdo_mysql</strong> listed as enabled/installed from the phpinfo output, then you would need to install the PHP-MySQL driver. 
+	<br><br>
+	This can be accomplished by running <mark><em>sudo apt-get install php5-mysql</em></mark>. If you run into any issues, you can refer to the <a href="http://www.php.net/manual/en/install.unix.debian.php">official PHP documentation</a> for troubleshooting the issue.
+</p>
+
+<p>
+	Now rerun the PHP file that contained "phpinfo( )" and determine if the driver was successfully installed. If done correctly, you can move on to the next step.  
+</p>
+
+<p>Click <a href="index.html">home</a> to go back to the home page of the turotial.</p>
+<p>Click <a href="connection.html">connection</a> to go to the next step of the turotial, making a connection.</p>
+
+</body>
+</html>
