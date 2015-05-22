@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <link href="style.css" rel="stylesheet" type="text/css">
+		<title>PDO tutorial - Fetching Results</title>
+	</head>
+<body>
+<h1 class="title">Fetching Results</h1>
+
+<p>
+	Now that you have learned how to insert data into a database, its time to obtain some results from the database. Our query was an INSERT query for adding an employee into the database, however, since it was an insert query there is nothing to fetch from the database to display. 
+</p>
+
+<p>
+	If you're interested in fetching the column names in a table you can do so with the statement handler following a prepared statement with a SELECT query: <br><br>
+	<mark><em>$result = $stmt->fetchColumn();</em></mark>
+</p>
+
+<p>
+	If you're interested fetching the number of rows that were affected in a query, for example, lets say a DELETE query, you would use:<br><br>
+	<mark><em>$count = $del->rowCount();</em></mark>
+
+</p>
+
+<p>
+	If you're interested in fetching all results, you could do: <br><br>
+	<mark><em>$result = $stmt->fetchAll();</em></mark>
+</p>
+
+<p>
+	The function <strong>fetchAll()</strong> returns an array containing all the rows in the result set. This method is not recommended to be used to fetch large sets of results simce it uses high resources. 
+</p>
+
+<p>
+	You may consider using <strong>fetch()</strong> instead to get individual results if you do not need all the rows in the result set. 
+</p>
+
+	
+	<p>Click <a href="prepared.html">prepared statements</a> to go back to prepared statements.</p>
+
+	<p>Click <a href="summary.html">summary</a> to go to the final step of the tutorial, the summary.</p>
+
+</body>
+</html>
