@@ -8,5 +8,50 @@
 <body>
 <h1 class="title">Let's make a connection! A connection to a MySQL database that is</h1>
 
+<p>
+	Once you have gone through with the MySQL setup by having a MySQL database with a username and password, we can begin connecting to it with the PDO driver in PHP. The following code is using PDO to establish a connection with the MySQL database:
+</p>
+
+	<div class="connection1"><img src="images/connection1.PNG" alt="connection1"></div>
+
+<p>
+	However, there are security concerns with establishing a connection with just the PHP code above. If there are any connection errors a back trace is displayed. The back trace may contain sensitive information such as full database connection details which include the username and password.
+</p>
+
+<p>
+	A way to handle connection errors is to use the try and catch clause with the connection code above:
+</p>
+	<div class="connection2"><img src="images/connection2.PNG" alt="connection2"></div>
+
+<p>
+	You might noticed that in the connection code there are 4 parameters: mysql:host=localhost, dbname=test, $username, and $password. 
+</p>
+
+<p>
+	For <strong>mysql:host=localhost</strong>, you would need to replace <strong>localhost</strong> with your database host that you are wanting to access. 
+</p>
+
+<p>
+	For <strong>dbname=test</strong>, you would need to replace <strong>test</strong> with your database name that you are wanting to access.
+</p>
+
+<p>
+	For <strong>$username</strong> and <strong>$password</strong>, these two parameters represent your username and password to access your database. However, the $username and $password are passed in from a separate file. This is a way to protect your login information since it is not stored in this file. To set up the separate file containing the username and password, you would do the following:
+</p>
+	<div class="logininfo"><img src="images/logininfo.PNG" atl="logininfo"></div>
+
+
+<p>
+	In order to use the separate file for your username and password, you would need to include the 
+	(path of the) file inside the same file that you are establishing a connection. For example if the file containing my username and password is inside login.php, I would do include 'login.php' as seen below:
+</p>
+
+	<div class="connection3"><img src="images/connection3.PNG"></div>
+
+
+	<p>Click <a href="installation.html">installation</a> to go back to installing PHP.</p>
+	<p>Click <a href="prepared.html">prepared statements</a> to go to the next step of the turotial, 
+	prepared statements.</p>
+	
 </body>
 </html>
