@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <link href="style.css" rel="stylesheet" type="text/css">
+		<title>PDO tutorial - Prepared Statements</title>
+	</head>
+<body>
+<h1 class="title">Queries and Prepared Statements</h1>
+
+<p>
+	Lets assume you have an employee table created in your database that has an id, first and last name as attributes. This will be a simple tutorial on using PDO to make queries.
+</p>
+	<div class="employee"><img src="images/employee.PNG" alt="employee"></div>
+
+<p>
+	Lets make a query to add a new row to the table values of employee. Lets add the employee John Smith who has an ID number 1. <br>
+</p>
+
+<p>
+	<mark><em>$dbh->execute(INSERT INTO employee (id, fname, lname) values (1, 'John', 'Smith'));</em></mark>
+</p>
+
+<p>
+	The code works in inserting a row into the employee table, but it doesn't fully utilize PDO features. Mentioned earlier were prepared statements and we will start covering the basics here: <strong>prepare, bind and execute.</strong> By using prepared queries, it can be executed multiple times with the same or different parameters.
+</p>
+
+<p>
+	There are name parameters of placeholders for the parameters that can be used for INSERT queries for PDO. These are examples of using named or placeholder parameters and there are other ways in doing so. 
+</p>	
+	<ul>
+		<li>Named parameters
+			<div class="named"><img src="images/named.PNG" alt="named"></div>
+
+		<li>Placeholder parameters
+			<div class="unnamed"><img src="images/unnamed.PNG" alt="unnamed"></div>
+			<p>*Notice the numeric value in bindParams need to match the sequence of attributes in the prepare statement*</p>
+	</ul>
+<p>
+	You can also insert an array of data which provide the same results as above. For example:
+</p>
+	<div class="array"><img src="images/array.PNG" alt="array"></div>
+
+<p>
+	You may have noticed the line of code <mark><em>$stmt->execute()</em></mark>. This executes the statement that was prepared and bounded. In the example, it will insert ID number 1 with the name John Smith into the employee table in your databsae.
+</p>
+
+<p>
+	This is a simple tutorial that covers the prepared statements. There are PDO class and PDOStatement class that can be used to perform the same actions as above, however, this is not covered in this tutorial. If you prefer to learn more about the PDO and PDOStatement class, you can refer to <a href="http://www.php.net/manual/en/class.pdo.php">PDO Class</a> and <a href="http://www.php.net/manual/en/class.pdostatement.php">PDOStatement Class</a>.
+</p>
+
+	<p>Click <a href="connection.html">connection</a> to go back to establishing a connection to MySQL database.</p>
+
+	<p>Click <a href="fetch.html">fetch results</a> to go to the next step of the turotial, 
+	fetching results.</p>
+
+</body>
+</html>
