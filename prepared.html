@@ -18,7 +18,7 @@
 </p>
 
 <p>
-	<mark><em>$dbh->execute(INSERT INTO employee (id, fname, lname) values (1, 'John', 'Smith'));</em></mark>
+	<mark><em>$dbh->execute("INSERT INTO employee (id, fname, lname) values (1, 'John', 'Smith')");</em></mark>
 </p>
 
 <p>
@@ -26,7 +26,7 @@
 </p>
 
 <p>
-	There are name parameters of placeholders for the parameters that can be used for INSERT queries for PDO. These are examples of using named or placeholder parameters and there are other ways in doing so. 
+	There are named parameters or placeholders for the parameters that can be used for INSERT queries for PDO. These are examples of using named or placeholder parameters and there are other ways in doing so. 
 </p>	
 	<ul>
 		<li>Named parameters
@@ -42,7 +42,7 @@
 	<div class="array"><img src="images/array.PNG" alt="array"></div>
 
 <p>
-	You may have noticed the line of code <mark><em>$stmt->execute()</em></mark>. This executes the statement that was prepared and bounded. In the example, it will insert ID number 1 with the name John Smith into the employee table in your databsae.
+	You may have noticed the line of code <mark><em>$stmt->execute()</em></mark>. This executes the statement that was prepared and bounded. In the example, it will insert ID number 1 with the name John Smith into the employee table in your database.
 </p>
 
 <p>
