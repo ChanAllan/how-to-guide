@@ -6,48 +6,80 @@
 		<title>PDO tutorial - Connecting to MySQL</title>
 	</head>
 <body>
+
+<ul class="nav">
+<li><a href="index.html">Home</a>
+<li><a href="installation.html">Installation</a>
+<li><a href="connection.html">Connection</a>
+<li><a href="prepared.html">Prepared Statements</a>
+<li><a href="fetch.html">Fetch Results</a>
+<li><a href="summary.html">Summary</a>
+</ul>
+
 <h1 class="title">Let's make a connection! A connection to a MySQL database that is</h1>
 
-<p>
-	Once you have gone through with the MySQL setup by having a MySQL database with a username and password, we can begin connecting to it with the PDO driver in PHP. The following code is using PDO to establish a connection with the MySQL database:
-</p>
+<div>
+	<p>
+		Once you have gone through with the MySQL setup by having a MySQL database with a username and password, we can begin connecting to it with the PDO driver in PHP. The following code is using PDO to establish a connection with the MySQL database:
+	</p>
 
-	<div class="connection1"><img src="images/connection1.PNG" alt="connection1"></div>
+	<div class="img_resize">
+		<a href="images/connection1.PNG"><img src="images/connection1.PNG" alt="connection1"></a>
+	</div>
+</div>
 
-<p>
-	However, there are security concerns with establishing a connection with just the PHP code above. If there are any connection errors a back trace is displayed. The back trace may contain sensitive information such as full database connection details which include the username and password.
-</p>
+<div>
+	<p>
+		However, there are security concerns with establishing a connection with just the PHP code above. If there are any connection errors a back trace is displayed. The back trace may contain sensitive information such as full database connection details which include the username and password.
+	</p>
+</div>
 
-<p>
-	A way to handle connection errors is to use the try and catch clause with the connection code above:
-</p>
-	<div class="connection2"><img src="images/connection2.PNG" alt="connection2"></div>
+<div>
+	<p>
+		A way to handle connection errors is to use the try and catch clause with the connection code above:
+	</p>
 
-<p>
-	You might noticed that in the connection code there are 4 parameters: mysql:host=$host, dbname=$dbname, $username, and $password. 
-</p>
+	<div class="img_resize">
+		<a href="images/connection2.PNG"><img src="images/connection2.PNG" alt="connection2"></a>
+	</div>
+</div>
 
-<p>
-	For <strong>mysql:host=$host</strong>, you would need to replace <strong>$host</strong> with your database host that you are wanting to access and for <strong>dbname=$dbname</strong>, you would need to replace <strong>$dbname</strong> with your database name that you are wanting to access. This will be done in a separate file shown below.
-</p>
+<div>
+	<p>
+		You might noticed that in the connection code there are 4 parameters: mysql:host=$host, dbname=$dbname, $username, and $password. 
+	</p>
+</div>
 
-<p>
-	For <strong>$username</strong> and <strong>$password</strong>, these two parameters represent your username and password to access your database. However, the $host, $dbname, $username and $password are passed in from a separate file. This is a way to protect your login information since it is not stored in this file. To set up the separate file containing the host, dbname, username and password, you would do the following shown below and replace <strong>'your_host'</strong>, <strong>'your_database_name'</strong>, <strong>'your_username'</strong> and <strong>'your_password'</strong> with the required login information.
-</p>
-	<div class="logininfo"><img src="images/logininfo.PNG" atl="logininfo"></div>
+<div>
+	<p>
+		For <strong>mysql:host=$host</strong>, you would need to replace <strong>$host</strong> with your database host that you are wanting to access and for <strong>dbname=$dbname</strong>, you would need to replace <strong>$dbname</strong> with your database name that you are wanting to access. This will be done in a separate file shown below.
+	</p>
+</div>
 
+<div>
+	<p>
+		For <strong>$username</strong> and <strong>$password</strong>, these two parameters represent your username and password to access your database. However, the $host, $dbname, $username and $password are passed in from a separate file. This is a way to protect your login information since it is not stored in this file. To set up the separate file containing the host, dbname, username and password, you would do the following shown below and replace <strong>'your_host'</strong>, <strong>'your_database_name'</strong>, <strong>'your_username'</strong> and <strong>'your_password'</strong> with the required login information.
+	</p>
 
-<p>
-	In order to use the separate file for your username and password, you would need to include the 
-	(path of the) file inside the same file that you are establishing a connection. For example if the file containing my login information is inside the file login.php, I would do <mark>require('login.php')</mark> as seen below:
-</p>
+	<div class="img_resize">
+		<a href="images/logininfo.PNG"><img src="images/logininfo.PNG" atl="logininfo"></a>
+	</div>
+</div>
 
-	<div class="connection3"><img src="images/connection3.PNG"></div>
+<div>
+	<p>
+		In order to use the separate file for your username and password, you would need to include the (path of the) file inside the same file that you are establishing a connection. For example if the file containing my login information is inside the file login.php, I would do <mark>require('login.php')</mark> as seen below (the example is assuming the file is in the same directory):
+	</p>
 
+	<div class="img_resize">
+		<a href="images/connection3.PNG"><img src="images/connection3.PNG"></a>
+	</div>
+</div>
 
-	<p>Click <a href="installation.html">installation</a> to go back to installing PHP.</p>
-	<p>Click <a href="prepared.html">prepared statements</a> to go to the next step of the turotial, 
-	prepared statements.</p>
-	
+<footer>
+  <p>Posted by: Allan Chan</p>
+  <p>Contact information: chanal@onid.oregonstate.edu</p>
+</footer> 
+
 </body>
 </html>

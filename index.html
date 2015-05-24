@@ -6,57 +6,74 @@
 		<title>PDO Tutorial - The beginning</title>
 	</head>
 <body>
+
+<ul class="nav">
+<li><a href="index.html">Home</a>
+<li><a href="installation.html">Installation</a>
+<li><a href="connection.html">Connection</a>
+<li><a href="prepared.html">Prepared Statements</a>
+<li><a href="fetch.html">Fetch Results</a>
+<li><a href="summary.html">Summary</a>
+</ul>
+
 <h1 class="title">Should you be using PHP's PDO extension for database access?</h1>
-<p>
-	This is a simple tutorial that will cover some information about PDO, installation on <b>UNIX</b> systems,
-	connecting to a MySQL database with PDO, using queries and prepared statements, fetching results,
-	and a final summary.
-</p>
+<div>
+	<p>
+		This is a simple tutorial that will cover some information about PDO (PHP Data Object), installation of the PDO MySQL extension on <b>UNIX</b> systems,
+		connecting to a MySQL database with PDO features, using queries and prepared statements to add information to database, fetching results from the database, and a final summary of all the steps.
+	</p>
+</div>
 
 <h2>Well what's PDO exactly?</h2>
-<ul>
-	<li><strong>PDO</strong> stands for PHP Data Objects and it is a PHP extension that provides a simpler and consistent interface for accessing databases. PDO can access 12 different databases which include: 
-		<ul>
-			<li>Curbid 
-			<li>MS SQL Server
-			<li>Firebird
-			<li>IBM
-			<li>Informix
-			<li>MySQL (main focus of tutorial)
-			<li>Oracle
-			<li>PostgreSQL
-			<li>SQLite
-			<li>4D
-			<li>ODBC
-			<li>DB2
-		</ul>
-	<li>It is one of three available API's (application programming interface) for connecting to a MySQL database, the other two being MySQL and MySQLi (the improved extension of MySQL).
-		<ul>
-			<li><b>MySQL</b> is the original extension to access the MySQL database and is supported in older versions of MySQL (4.1.3 and older). <strong>It has been deprecated and PDO or MySQLi (mentioned below) is recommended</strong>.
+<div>
+	<ul>
+		<li><strong>PDO</strong> stands for PHP Data Objects and it is a PHP extension that provides a simpler and consistent interface for accessing databases. PDO can access 12 different databases which include: 
 
-			<li><b>MySQLi</b> is the improved extension and takes advantage of new features of MySQL in version 4.1.3 or newer. Some benefits over MySQL is that it is that it has an object-oriented interface, supports multiple statements and prepared statements. 
-		</ul>
-</ul>
+		<br><br>
+
+		<table class="table1">
+			<tr><td>Curbid<td>MS SQL Server<td>Firebird				
+			<tr><td>IBM<td>Informix<td>MySQL
+			<tr><td>Oracle<td>PostgreSQL<td>SQLite
+			<tr><td>4D<td>ODBC<td>DB2
+		</table>
+
+		<br>
+
+		<li>It is one of three available API's (application programming interface) for connecting to a MySQL database, the other two being MySQL and MySQLi (the improved extension of MySQL).
+			<ul>
+				<li><b>MySQL</b> is the original extension to access the MySQL database and is supported in older versions of MySQL (4.1.3 and older). <strong>It has been deprecated and PDO or MySQLi (mentioned below) is recommended</strong>.
+
+				<li><b>MySQLi</b> is the improved extension and takes advantage of new features of MySQL in version 4.1.3 or newer. Some benefits over MySQL is that it is that it has an object-oriented interface, supports multiple statements and prepared statements. 
+			</ul>
+	</ul>
+</div>
 
 <h2>The advantages of PDO</h2>
-<ul>
-	<li>One advantage is better security. PDO uses prepared statements (paramaterized queries) that 
-		<strong>can protect against SQL injections</strong> (it is a technique where malicious users can inject SQL commands into a SQL statement where it can compromise the security of the web application).
+<div>
+	<ul>
+		<li>One advantage is better security. PDO uses prepared statements (paramaterized queries) that 
+			<strong>can protect against SQL injections</strong> (it is a technique where malicious users can inject SQL commands into a SQL statement where it can compromise the security of the web application).
 
-	<li>Another advantage is that there is input validation such that it checks for and accepts 
-		expected input data type and rejects non-acceptable input data types.
+		<li>Another advantage is that there is input validation such that it checks for and accepts 
+			expected input data type and rejects non-acceptable input data types.
 
-	<li>When using a PDO API, a few changes in the PHP code can allow you to connect to other database
-	 	servers.
-</ul>
+		<li>When using a PDO API, a few changes in the PHP code can allow you to connect to other database
+		 	servers.
+	</ul>
+</div>
 
 <h2>The disadvantages of PDO</h2>
-<ul>
-	<li>Compared to MySQLi extension, PDO is more complex for newcomers to understand. MySQLi offers a
-		procedural API and is an easier transition over from MySQL.
-</ul>
+<div>
+	<ul>
+		<li>Compared to MySQLi extension, PDO is more complex for newcomers to understand. MySQLi offers a procedural API and is an easier transition over from MySQL.
+	</ul>
+</div>
 
+<footer>
+  <p>Posted by: Allan Chan</p>
+  <p>Contact information: chanal@onid.oregonstate.edu</p>
+</footer> 
 
-<p>Click <a href="installation.html">installation</a> to check how to get PDO on your system.</p>
 </body>
 </html>
