@@ -1,0 +1,62 @@
+body {
+	background-color: #BDB69C;
+	color:#2F343A;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+div {
+	margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+table, tr, td {
+	border:1px solid black;
+	text-align: center;
+}
+
+.table1 {
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+/*Found styling tips on creating the navigation bar
+http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/*/
+.nav {
+	border:1px solid black;
+	border-width:1px 0;
+	list-style:none;
+	margin-left:auto;
+	margin-right:auto;
+	padding:0;
+	text-align:center;
+	background-color: #6DBDD6;
+}
+
+.nav li{
+	display:inline;
+}
+
+.nav a{
+	display:inline-block;
+	padding:10px;
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	display:block;
+}
+
+.img_resize img {
+	max-width:100%;
+	height:auto;
+}
+
